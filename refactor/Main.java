@@ -1,4 +1,5 @@
 import java.time.LocalDate;
+import java.util.Arrays;
 import java.util.List;
 
 public class Main {
@@ -13,11 +14,17 @@ public class Main {
         calculadoraComision.registrar("MISMO_BANCO", new TransferenciaMismoBanco());
         calculadoraComision.registrar("OTRO_BANCO", new TransferenciaOtroBanco());
         calculadoraComision.registrar("INTERNACIONAL", new TransferenciaInternacional());
+        calculadoraComision.registrar("LLAVE", new TransferenciaLlave());
+
+        Notificador notificador = new NotificadorMultiple(
+                Arrays.asList(new SmsGateway(), new PushNotifierConsola())
+        );
 
         TransaccionService servicio = new TransaccionService(
-                new OracleRepositorio(),
-                new SmsGateway(),
-                calculadoraComision
+                new PostgresRepositorio(),
+                notificador,
+                calculadoraComision,
+                new AntifraudeConsola()
         );
 
         servicio.transferir(ana, luis, 150_000, "OTRO_BANCO");
