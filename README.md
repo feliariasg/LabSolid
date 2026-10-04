@@ -217,7 +217,7 @@ El proyecto conserva Maven + JUnit 5 + GitHub Actions. Las pruebas del Bloque 3 
 
 
 
-Archivo: [`diagramas/UML-despues.drawio.svg`](diagramas/UML-despues.drawio.svg)
+![Diagrama UML](diagramas/UML-despues.drawio.svg)
 
 > A diferencia del diagrama del Bloque 1, en el diseño final:
 > - `CDT` ya no implementa `CuentaRetirable`, por lo que no rompe LSP.
