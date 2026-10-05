@@ -218,6 +218,22 @@ El proyecto conserva Maven + JUnit 5 + GitHub Actions. Las pruebas del Bloque 3 
 
 ---
 
+## Bloque 5 — Revisión cruzada
+
+La rama de la revisión cruzada no se integra a `main`: se deja aparte y se referencia aquí.
+
+### Nuestra revisión del código de la otra pareja
+
+Implementamos R6 (pago de servicios públicos) sobre el repositorio
+[andreshern7/SOLID2-Ingesoft-II](https://github.com/andreshern7/SOLID2-Ingesoft-II), en una rama, con el commit
+`revision-cruzada`. Quedó en el [pull request 1](https://github.com/andreshern7/SOLID2-Ingesoft-II/pull/1) de ese repositorio. La lista de revisión que les entregamos está en el archivo `REVISION_CRUZADA.md` de esa rama.
+
+### La revisión que recibimos de la otra pareja
+
+La rama de la revisión que recibimos de la otra pareja está con el nombre de `revision-cruzada`, quedó con el [pull request 3](https://github.com/feliariasg/LabSolid/pull/3) de este repositorio y la lista se ve en el `REVISION_CRUZADA.md` de la mencionada rama `revision-cruzada`.
+
+---
+
 ## Bloque 6 — Cierre
 
 ### 6.1 Diagrama de clases UML final
