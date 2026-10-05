@@ -1,4 +1,11 @@
 # Laboratorio L2 — Banco Andino
+Ingeniería de Software II - Universidad Nacional de Colombia - Sede Bogotá - 2026
+
+**Integrantes:**
+
+    Manuel Federico Castro Suarez (mcastrosu@unal.edu.co)
+    Andrés Felipe Arias González (anariasg@unal.edu.co)
+
 **Lenguaje elegido:** Java (el mismo del código base; no fue necesario traducir).
 
 ---
