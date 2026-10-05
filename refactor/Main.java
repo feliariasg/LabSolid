@@ -15,6 +15,7 @@ public class Main {
         calculadoraComision.registrar("OTRO_BANCO", new TransferenciaOtroBanco());
         calculadoraComision.registrar("INTERNACIONAL", new TransferenciaInternacional());
         calculadoraComision.registrar("LLAVE", new TransferenciaLlave());
+        calculadoraComision.registrar(PagoServiciosService.TIPO, new ComisionPagoServicios());
 
         Notificador notificador = new NotificadorMultiple(
                 Arrays.asList(new SmsGateway(), new PushNotifierConsola())
@@ -28,6 +29,15 @@ public class Main {
         );
 
         servicio.transferir(ana, luis, 150_000, "OTRO_BANCO");
+
+        PagoServiciosService pagoServicios = new PagoServiciosService(
+                new PostgresRepositorio(),
+                notificador,
+                calculadoraComision,
+                new AntifraudeConsola()
+        );
+
+        pagoServicios.pagar(ana, "FAC-2026-001", 184_300);
 
         new CobroCuotaManejo().cobrarMensual(List.of(ana, luis));
 
